@@ -37,7 +37,7 @@ steps:
   inputs:
     SourceFolder: 'D:\a\1\s\'
     Contents: '**'
-    TargetFolder: 'D:\a\1\a'
+    TargetFolder: 'D:\a\r1\a'
 
 - task: PublishBuildArtifacts@1
   inputs:
