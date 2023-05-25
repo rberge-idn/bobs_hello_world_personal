@@ -33,6 +33,12 @@ steps:
 #    platform: '$(buildPlatform)'
 #    configuration: '$(buildConfiguration)'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'D:\a\1\s\'
+    Contents: '**'
+    TargetFolder: 'D:\a\1\a'
+
 - task: CmdLine@2
   inputs:
     script: |
@@ -41,11 +47,6 @@ steps:
       echo Hello world
       
       dir /s /b
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: 'D:\a\1\s\'
-    Contents: '**'
-    TargetFolder: 'D:\a\r1\a'
 
 - task: PublishBuildArtifacts@1
   inputs:
